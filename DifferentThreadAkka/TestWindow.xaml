@@ -1,0 +1,13 @@
+﻿<Window x:Class="DifferentThreadAkka.TestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Activated="TestWindow_OnActivated">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Name="TextB" Text="{Binding Path=Texting, Mode=TwoWay}">Hello There!</TextBlock>
+        <Button Grid.Row="1" Command="{Binding PrintCommand}">Send message to console</Button>
+    </Grid>
+</Window>
